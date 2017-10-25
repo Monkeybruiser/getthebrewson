@@ -135,7 +135,7 @@ gulp.task('lint', function() {
 gulp.task('scripts', function() {
     return gulp.src([
 		// "public/library/js/libs/jquery.fitvids.js",
-		"public/library/js/libs/jquery.cookies.js",
+		// "public/library/js/libs/jquery.cookies.js",
 		"public/library/js/scripts.js",
 		])
         .pipe(concat('all.js'))

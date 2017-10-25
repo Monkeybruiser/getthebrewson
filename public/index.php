@@ -17,24 +17,42 @@
 	<meta name="msapplication-starturl" content="http://www.getthebrewson.co.uk/">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Get the brews on</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width">
-
+	<link rel="icon" href="library/images/win8-tile-icon.png">
 	<link rel="apple-touch-icon" href="library/images/apple-icon-touch.png">
+	<meta name="msapplication-TileImage" content="library/images/win8-tile-icon.png">
+
 	<link rel="icon" href="favicon.png">
 	<!--[if IE]>
 		<link rel="shortcut icon" href="favicon.ico">
 	<![endif]-->
-	<meta name="msapplication-TileImage" content="library/images/win8-tile-icon.png">
+
+
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Get the brews on</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
 
 	<script src="library/js/libs/modernizr.js"></script>
 
 	<link href='http://fonts.googleapis.com/css?family=Amaranth:400,700italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="library/css/style.css">
+
+	<script>
+		if ('serviceWorker' in navigator) {
+		  window.addEventListener('load', function() {
+		    navigator.serviceWorker.register('sw.js').then(
+		      function(registration) {
+		        // Registration was successful
+		        console.log('ServiceWorker registration successful with scope: ', registration.scope); },
+		      function(err) {
+		        // registration failed :(
+		        console.log('ServiceWorker registration failed: ', err);
+		      });
+		  });
+		}
+	</script>
 
 	<?php
 

@@ -155,18 +155,12 @@
 		</div>
 	</section>
 
-	<?php /*
-	<footer>
-		<div class="wrap">
-
-			<p>Delivered by <a href="http://www.cargocreative.co.uk" title="Visit Cargo Creative's Website">Cargo</a>.</p>
-
-		</div>
-	</footer>
-	*/ ?>
-
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<?php
+	/*
 	<script src="library/js/libs/jquery.cookies.js"></script>
+	*/
+	?>
 	<script src="library/js/min/all.min.js"></script>
 
 </body>

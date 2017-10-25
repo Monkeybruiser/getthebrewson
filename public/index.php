@@ -26,13 +26,11 @@
 		<link rel="shortcut icon" href="favicon.ico">
 	<![endif]-->
 
-
-
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>Get the brews on</title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Get the brews on</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
 
 	<script src="library/js/libs/modernizr.js"></script>
 

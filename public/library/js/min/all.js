@@ -13,11 +13,8 @@
     $.extend({
         playSound: function () {
             return $(
-                   '<audio class="sound-player" autoplay="autoplay" style="display:none;">'
-                     + '<source src="' + arguments[0] + '" />'
-                     + '<embed src="' + arguments[0] + '" hidden="true" autostart="true" loop="false"/>'
-                   + '</audio>'
-                 ).appendTo('body');
+               '<audio class="sound-player" autoplay="autoplay" style="display:none;">' + '<source src="' + arguments[0] + '" />' + '<embed src="' + arguments[0] + '" hidden="true" autostart="true" loop="false"/>' + '</audio>'
+			).appendTo('body');
         },
         stopSound: function () {
             $(".sound-player").remove();
@@ -272,7 +269,7 @@ function getBrewer() {
 
 	setTimeout(function() {
 		jQuery('.kettle--name--wrap').addClass('show');
-		if(notificationBrewTimer != 0) {
+		if(notificationBrewTimer !== 0) {
 			jQuery('.countdown').addClass('visible');
 		}
 	}, 6000);
@@ -290,7 +287,7 @@ function initCountdownTimer() {
 
 	notificationBrewTimer 				= jQuery('#countdownVal').val();
 
-	if(notificationBrewTimer != 0) {
+	if(notificationBrewTimer !== 0) {
 
 		// console.log('Starting timer now');
 

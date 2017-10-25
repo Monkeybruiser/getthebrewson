@@ -1,0 +1,9 @@
+{
+  "name": "Get The Brews On",
+  "short_name": "GTBO",
+  "description": "Randomise names to see whose turn it is to make a brew!",
+  "lang": "en-GB",
+  "start_url": "http://www.getthebrewson.co.uk/",
+  "display": "standalone",
+  "theme_color": "#a77748"
+}

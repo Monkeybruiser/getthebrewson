@@ -4,6 +4,20 @@
 <!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
+
+	<link rel="manifest" href="manifest.json">
+
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="GTBO">
+	<meta name="apple-mobile-web-app-title" content="GTBO">
+	<meta name="theme-color" content="#a77748">
+	<meta name="msapplication-navbutton-color" content="#a77748">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="msapplication-starturl" content="http://www.getthebrewson.co.uk/">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>Get the brews on</title>
@@ -15,7 +29,6 @@
 	<!--[if IE]>
 		<link rel="shortcut icon" href="favicon.ico">
 	<![endif]-->
-	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="library/images/win8-tile-icon.png">
 
 	<script src="library/js/libs/modernizr.js"></script>

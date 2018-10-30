@@ -120,37 +120,36 @@
 
 				?>
 				<ul class="brew-list" id="brewList">
-				<?php
+					<?php
 
-					if($cookie_total > 0){
+						if($cookie_total > 0){
 
-						// Now that we have the numbers, lets start the loops.
-						$i = 1;
+							// Now that we have the numbers, lets start the loops.
+							$i = 1;
 
-						do {
+							do {
 
-							if(isset($_COOKIE['brewer_number_' . ($i)])) {
+								if(isset($_COOKIE['brewer_number_' . ($i)])) {
 
-								$cookie = $_COOKIE['brewer_number_' . ($i)];
+									$cookie = $_COOKIE['brewer_number_' . ($i)];
 
-								if( $cookie != ""){
+									if( $cookie != ""){
 
-				?>
+					?>
 					<li class="option option-<?php echo $i; ?>" data-name="brewer_number_<?php echo $i; ?>"><span class="option--name"><?php echo $cookie; ?></span> <span class="option--delete">Remove this name</span></li>
-				<?php
+					<?php
+
+									}
 
 								}
 
-							}
+								$i++;
 
-							$i++;
+							} while ($i <= $cookie_total);
 
+						}
 
-						} while ($i <= $cookie_total);
-
-					}
-
-				?>
+					?>
 				</ul>
 				<?php
 

@@ -13,7 +13,7 @@
 	font-size: 1.2em;
 	list-style: none;
 	margin: 2em 0;
-	padding: 0;
+	padding: 1em 0;
 	text-align: left;
 
 	li {
@@ -28,8 +28,15 @@
 }
 
 .option {
-	padding: .5em 0;
+	border: 1px solid #a1a5bc;
+	border-width: 0 0 1px;
+	padding: .5em 2em .5em 1em;
 	position: relative;
+
+	&:last-child {
+		border-width: 0;
+	}
+
 }
 
 .option--delete {
@@ -44,7 +51,7 @@
 	height: 20px;
 	overflow: hidden;
 	position: absolute;
-	right: 0;
+	right: 1em;
 	text-indent: -100%;
 	top: 50%;
 	transform: translateY(-50%);

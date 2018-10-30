@@ -8,7 +8,7 @@
  * $.playSound('/attachments/sounds/1234.mp3')
  * $.stopSound();
 **/
-
+/*
 (function ($) {
     $.extend({
         playSound: function () {
@@ -21,6 +21,7 @@
         }
     });
 })(jQuery);
+*/
 
 
 
@@ -30,15 +31,16 @@ var id							= 0;
 var cookies 					= '';
 var notificationBrewTimer		= 0;
 var notificationTimer			= 0;
+var expires						= '';
 
 
 
-$(document).ready(function() {
+jQuery(document).ready(function($) {
 
 
 
 	$(".add-name").submit(function(e) {
-	    e.preventDefault();
+		e.preventDefault();
 	});
 
 
@@ -55,8 +57,6 @@ $(document).ready(function() {
 	var oButton		= document.getElementById('addBrewer');
 	var data		= document.getElementById('dataInput');
 	var display		= document.getElementById('brewList');
-
-
 
 	oButton.onclick = function() {
 		$.cookie('brewer_number_' + id, data.value);
@@ -186,9 +186,9 @@ function createCookie(name,value,days) {
     if (days) {
         var date = new Date();
         date.setTime(date.getTime()+(days*24*60*60*1000));
-        var expires = "; expires="+date.toGMTString();
+        expires = "; expires="+date.toGMTString();
     }
-    else var expires = "";
+    else expires = "";
     document.cookie = name+"="+value+expires+"; path=/";
 
 }
@@ -201,6 +201,12 @@ function createCookie(name,value,days) {
 
 */
 function rollForBrewer() {
+
+	if(jQuery('.countdown').hasClass('visible')) {
+
+		jQuery('.countdown').removeClass('visible');
+
+	}
 
 	// $.playSound('http://getthebrewson.mb/library/audio/kettle-boil.mp3');
 
@@ -269,7 +275,7 @@ function getBrewer() {
 
 	setTimeout(function() {
 		jQuery('.kettle--name--wrap').addClass('show');
-		if(notificationBrewTimer !== 0) {
+		if(notificationBrewTimer > 0) {
 			jQuery('.countdown').addClass('visible');
 		}
 	}, 6000);
@@ -287,7 +293,7 @@ function initCountdownTimer() {
 
 	notificationBrewTimer 				= jQuery('#countdownVal').val();
 
-	if(notificationBrewTimer !== 0) {
+	if(notificationBrewTimer > 0) {
 
 		// console.log('Starting timer now');
 
@@ -309,10 +315,9 @@ function initCountdownTimer() {
 			jQuery('.countdown--timer span').html(minutes + ':' + seconds);
 			notificationTimer			= minutes + ':' + seconds;
 
-			if(minutes < 0) {
+			if(minutes === 0 && seconds === 01) {
 
 				notificationPopup();
-
 				clearInterval(interval);
 
 			}
@@ -345,8 +350,6 @@ function notificationPopup() {
 			icon: 'http://www.getthebrewson.co.uk/library/images/img-notification-tile.png',
 			body: 'It\'s someone elses turn to make the brews. Click to give it another spin!',
 		});
-
-		window.open("http://www.getthebrewson.co.uk/");
 
 	}
 

@@ -34,7 +34,7 @@
 
 	<script src="library/js/libs/modernizr.js"></script>
 
-	<link href='http://fonts.googleapis.com/css?family=Amaranth:400,700italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Amaranth:400,700italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="library/css/style.css">
 
 	<script>
@@ -183,7 +183,7 @@
 		</div>
 	</section>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 	<script src="library/js/libs/jquery.cookies.js"></script>
 	<script src="library/js/min/all.min.js"></script>
 
